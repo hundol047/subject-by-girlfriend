@@ -1,0 +1,70 @@
+﻿original_term,normalized_term,english_term,snomed_concept,snomed_concept_id,source_type,mapping_status
+creatinine,creatinine,creatinine,,UNVERIFIED,test_result,Unverified
+congestive heart failure,congestive heart failure,congestive heart failure,Congestive heart failure (disorder),42343007,disease,Exact
+edema,edema,edema,Edema (finding),267038008,symptom,Exact
+leg swelling,leg swelling,leg swelling,Edema (finding),267038008,symptom,Partial
+furosemide,furosemide,furosemide,Furosemide (substance),387475002,medication,Exact
+sacubitril/valsartan,sacubitril/valsartan,sacubitril/valsartan,,UNVERIFIED,medication,Unverified
+torsemide,torsemide,torsemide,,UNVERIFIED,medication,Unverified
+sodium restriction,sodium restriction,sodium restriction,,UNVERIFIED,treatment,Unverified
+spironolactone,spironolactone,spironolactone,Spironolactone (substance),387078006,medication,Exact
+heart failure,heart failure,heart failure,Heart failure (disorder),84114007,disease,Exact
+heart failure with reduced ejection fraction,heart failure with reduced ejection fraction,heart failure with reduced ejection fraction,Heart failure (disorder),84114007,disease,Partial
+orthopnea,orthopnea,orthopnea,Orthopnea (finding),86290005,symptom,Exact
+potassium,potassium,potassium,,UNVERIFIED,test_result,Unverified
+nt-probnp,nt-probnp,nt-probnp,,UNVERIFIED,test_result,Unverified
+ace inhibitor,ace inhibitor,ace inhibitor,,UNVERIFIED,treatment,Unverified
+hypertension,hypertension,hypertension,Hypertension (disorder),38341003,disease,Exact
+atrial fibrillation,atrial fibrillation,atrial fibrillation,Atrial fibrillation (disorder),49436004,disease,Exact
+digoxin,digoxin,digoxin,Digoxin (substance),387106007,medication,Exact
+paroxysmal nocturnal dyspnea,paroxysmal nocturnal dyspnea,paroxysmal nocturnal dyspnea,,UNVERIFIED,symptom,Unverified
+palpitations,palpitations,palpitations,Palpitations (finding),80313002,symptom,Exact
+arni,arni,arni,,UNVERIFIED,treatment,Unverified
+mineralocorticoid receptor antagonist,mineralocorticoid receptor antagonist,mineralocorticoid receptor antagonist,,UNVERIFIED,treatment,Unverified
+chest discomfort,chest discomfort,chest discomfort,,UNVERIFIED,symptom,Unverified
+metoprolol,metoprolol,metoprolol,Metoprolol (substance),373492002,medication,Exact
+enalapril,enalapril,enalapril,,UNVERIFIED,medication,Unverified
+valsartan,valsartan,valsartan,,UNVERIFIED,medication,Unverified
+losartan,losartan,losartan,,UNVERIFIED,medication,Unverified
+shortness of breath,shortness of breath,shortness of breath,Dyspnea (finding),267036007,symptom,Partial
+arb,arb,arb,,UNVERIFIED,treatment,Unverified
+decreased appetite,decreased appetite,decreased appetite,,UNVERIFIED,symptom,Unverified
+implantable cardioverter defibrillator,implantable cardioverter defibrillator,implantable cardioverter defibrillator,,UNVERIFIED,treatment,Unverified
+chest x-ray,chest x-ray,chest x-ray,Plain chest X-ray (procedure),399208008,test,Exact
+ejection fraction,ejection fraction,ejection fraction,Ejection fraction (observable entity),250908004,test_result,Exact
+cardiomyopathy,cardiomyopathy,cardiomyopathy,,UNVERIFIED,disease,Unverified
+sacubitril,sacubitril,sacubitril,,UNVERIFIED,medication,Unverified
+empagliflozin,empagliflozin,empagliflozin,,UNVERIFIED,medication,Unverified
+cardiac rehabilitation,cardiac rehabilitation,cardiac rehabilitation,,UNVERIFIED,treatment,Unverified
+weight gain,weight gain,weight gain,,UNVERIFIED,symptom,Unverified
+chronic kidney disease,chronic kidney disease,chronic kidney disease,Chronic kidney disease (disorder),709044004,disease,Exact
+heart failure with preserved ejection fraction,heart failure with preserved ejection fraction,heart failure with preserved ejection fraction,Heart failure (disorder),84114007,disease,Partial
+lisinopril,lisinopril,lisinopril,Lisinopril (substance),386872008,medication,Exact
+bnp,bnp,bnp,,UNVERIFIED,test_result,Unverified
+electrocardiogram,electrocardiogram,electrocardiogram,Electrocardiographic procedure (procedure),29303009,test,Exact
+cardiac resynchronization therapy,cardiac resynchronization therapy,cardiac resynchronization therapy,,UNVERIFIED,treatment,Unverified
+leg edema,leg edema,leg edema,Edema (finding),267038008,symptom,Partial
+echocardiography,echocardiography,echocardiography,Echocardiography (procedure),40701008,test,Exact
+diuretic,diuretic,diuretic,,UNVERIFIED,treatment,Unverified
+sodium,sodium,sodium,,UNVERIFIED,test_result,Unverified
+coronary artery disease,coronary artery disease,coronary artery disease,Coronary arteriosclerosis (disorder),53741008,disease,Exact
+myocardial infarction,myocardial infarction,myocardial infarction,Myocardial infarction (disorder),22298006,disease,Exact
+sglt2 inhibitor,sglt2 inhibitor,sglt2 inhibitor,,UNVERIFIED,treatment,Unverified
+cough,cough,cough,Cough (finding),49727002,symptom,Exact
+bisoprolol,bisoprolol,bisoprolol,,UNVERIFIED,medication,Unverified
+diabetes mellitus,diabetes mellitus,diabetes mellitus,Diabetes mellitus (disorder),73211009,disease,Exact
+dyspnea,dyspnea,dyspnea,Dyspnea (finding),267036007,symptom,Exact
+peripheral edema,peripheral edema,peripheral edema,Edema (finding),267038008,symptom,Partial
+fluid restriction,fluid restriction,fluid restriction,,UNVERIFIED,treatment,Unverified
+beta blocker,beta blocker,beta blocker,,UNVERIFIED,treatment,Unverified
+fatigue,fatigue,fatigue,Fatigue (finding),84229001,symptom,Exact
+carvedilol,carvedilol,carvedilol,Carvedilol (substance),386836001,medication,Exact
+dapagliflozin,dapagliflozin,dapagliflozin,,UNVERIFIED,medication,Unverified
+chest,chest,chest,,UNVERIFIED,general_keyword,No Match
+discomfort,discomfort,discomfort,,UNVERIFIED,general_keyword,No Match
+allergy,allergy,allergy,,UNVERIFIED,general_keyword,No Match
+lab,lab,lab,,UNVERIFIED,general_keyword,No Match
+past,past,past,,UNVERIFIED,general_keyword,No Match
+disease,disease,disease,,UNVERIFIED,general_keyword,No Match
+leg,leg,leg,,UNVERIFIED,general_keyword,No Match
+gain,gain,gain,,UNVERIFIED,general_keyword,No Match

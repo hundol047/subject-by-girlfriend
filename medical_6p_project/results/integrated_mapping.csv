@@ -1,0 +1,70 @@
+﻿term,emr_frequency,article_frequency,total_frequency,snomed_concept,snomed_concept_id,mapping_status
+ejection fraction,124,10,134,Ejection fraction (observable entity),250908004,Exact
+heart failure,80,25,105,Heart failure (disorder),84114007,Exact
+sodium,80,2,82,,UNVERIFIED,Unverified
+bnp,80,2,82,,UNVERIFIED,Unverified
+creatinine,80,1,81,,UNVERIFIED,Unverified
+potassium,80,1,81,,UNVERIFIED,Unverified
+chest,50,0,50,,UNVERIFIED,No Match
+discomfort,50,0,50,,UNVERIFIED,No Match
+chest discomfort,50,0,50,,UNVERIFIED,Unverified
+fatigue,42,1,43,Fatigue (finding),84229001,Exact
+disease,38,5,43,,UNVERIFIED,No Match
+allergy,40,0,40,,UNVERIFIED,No Match
+lab,40,0,40,,UNVERIFIED,No Match
+past,40,0,40,,UNVERIFIED,No Match
+dyspnea,36,3,39,Dyspnea (finding),267036007,Exact
+leg,38,0,38,,UNVERIFIED,No Match
+digoxin,32,1,33,Digoxin (substance),387106007,Exact
+weight gain,28,1,29,,UNVERIFIED,Unverified
+hypertension,28,1,29,Hypertension (disorder),38341003,Exact
+orthopnea,26,2,28,Orthopnea (finding),86290005,Exact
+gain,28,0,28,,UNVERIFIED,No Match
+losartan,28,0,28,,UNVERIFIED,Unverified
+atrial fibrillation,24,3,27,Atrial fibrillation (disorder),49436004,Exact
+diabetes mellitus,26,1,27,Diabetes mellitus (disorder),73211009,Exact
+valsartan,26,0,26,,UNVERIFIED,Unverified
+sacubitril/valsartan,26,0,26,,UNVERIFIED,Unverified
+sacubitril,26,0,26,,UNVERIFIED,Unverified
+heart failure with preserved ejection fraction,24,1,25,Heart failure (disorder),84114007,Partial
+edema,22,3,25,Edema (finding),267038008,Exact
+myocardial infarction,24,1,25,Myocardial infarction (disorder),22298006,Exact
+palpitations,24,0,24,Palpitations (finding),80313002,Exact
+decreased appetite,24,0,24,,UNVERIFIED,Unverified
+heart failure with reduced ejection fraction,20,4,24,Heart failure (disorder),84114007,Partial
+leg edema,22,2,24,Edema (finding),267038008,Partial
+torsemide,22,1,23,,UNVERIFIED,Unverified
+cough,22,0,22,Cough (finding),49727002,Exact
+coronary artery disease,20,2,22,Coronary arteriosclerosis (disorder),53741008,Exact
+paroxysmal nocturnal dyspnea,20,1,21,,UNVERIFIED,Unverified
+metoprolol,20,1,21,Metoprolol (substance),373492002,Exact
+spironolactone,20,1,21,Spironolactone (substance),387078006,Exact
+carvedilol,20,1,21,Carvedilol (substance),386836001,Exact
+lisinopril,20,0,20,Lisinopril (substance),386872008,Exact
+empagliflozin,18,1,19,,UNVERIFIED,Unverified
+chronic kidney disease,18,1,19,Chronic kidney disease (disorder),709044004,Exact
+bisoprolol,18,1,19,,UNVERIFIED,Unverified
+leg swelling,16,0,16,Edema (finding),267038008,Partial
+furosemide,14,1,15,Furosemide (substance),387475002,Exact
+congestive heart failure,14,0,14,Congestive heart failure (disorder),42343007,Exact
+enalapril,12,0,12,,UNVERIFIED,Unverified
+shortness of breath,10,1,11,Dyspnea (finding),267036007,Partial
+ace inhibitor,0,3,3,,UNVERIFIED,Unverified
+diuretic,0,3,3,,UNVERIFIED,Unverified
+nt-probnp,0,2,2,,UNVERIFIED,Unverified
+beta blocker,0,2,2,,UNVERIFIED,Unverified
+echocardiography,0,2,2,Echocardiography (procedure),40701008,Exact
+sglt2 inhibitor,0,2,2,,UNVERIFIED,Unverified
+chest x-ray,0,2,2,Plain chest X-ray (procedure),399208008,Exact
+arb,0,2,2,,UNVERIFIED,Unverified
+arni,0,1,1,,UNVERIFIED,Unverified
+sodium restriction,0,1,1,,UNVERIFIED,Unverified
+mineralocorticoid receptor antagonist,0,1,1,,UNVERIFIED,Unverified
+cardiac rehabilitation,0,1,1,,UNVERIFIED,Unverified
+cardiomyopathy,0,1,1,,UNVERIFIED,Unverified
+implantable cardioverter defibrillator,0,1,1,,UNVERIFIED,Unverified
+cardiac resynchronization therapy,0,1,1,,UNVERIFIED,Unverified
+electrocardiogram,0,1,1,Electrocardiographic procedure (procedure),29303009,Exact
+dapagliflozin,0,1,1,,UNVERIFIED,Unverified
+peripheral edema,0,1,1,Edema (finding),267038008,Partial
+fluid restriction,0,1,1,,UNVERIFIED,Unverified
