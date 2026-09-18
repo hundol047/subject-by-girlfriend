@@ -120,7 +120,8 @@ def extract_medical_terms(documents):
     results = {}
     for category, terms in CATEGORY_KEYWORDS.items():
         for term in terms:
-            pattern = r"\b" + re.escape(term.lower()) + r"\b"
+            # 단순 복수형(inhibitors, blockers 등)도 같은 개념으로 집계한다.
+            pattern = r"\b" + re.escape(term.lower()) + r"s?\b"
             count = len(re.findall(pattern, joined))
             if count > 0:
                 results[term] = {"category": category, "count": count}

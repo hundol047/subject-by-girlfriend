@@ -183,5 +183,7 @@ SYNONYM_MAP = {
     "chf": "congestive heart failure",
     "heart failure with reduced ejection fraction": "heart failure",
     "heart failure with preserved ejection fraction": "heart failure",
-    "cardiomyopathy": "heart failure",
+    # 주의: cardiomyopathy(심근병증)는 heart failure(심부전)의 원인이 될 수 있는
+    # 별도의 임상 개념이며 동의어가 아니다. 억지로 합치지 않고, 참조표에 없으므로
+    # map_term() 의 기본 로직에 따라 Unverified 로 남긴다.
 }

@@ -143,7 +143,10 @@ OFFLINE_FALLBACK_TEXTS = [
     ("Heart failure overview",
      "Heart failure is a chronic condition in which the heart cannot pump enough blood "
      "to meet the body's needs. It is commonly classified as heart failure with reduced "
-     "ejection fraction (HFrEF) or heart failure with preserved ejection fraction (HFpEF)."),
+     "ejection fraction (HFrEF) or heart failure with preserved ejection fraction (HFpEF). "
+     "Cardiomyopathy is a distinct disease of the heart muscle itself and is one of "
+     "several possible underlying causes of heart failure, rather than another name for "
+     "heart failure."),
     ("Common symptoms of heart failure",
      "Typical symptoms of heart failure include dyspnea on exertion, orthopnea, "
      "paroxysmal nocturnal dyspnea, fatigue, leg edema, and rapid weight gain due to "
@@ -157,8 +160,9 @@ OFFLINE_FALLBACK_TEXTS = [
      "and are used as blood biomarkers to support or exclude a diagnosis of heart failure."),
     ("Pharmacologic therapy classes",
      "Guideline-directed medical therapy for heart failure with reduced ejection fraction "
-     "includes ACE inhibitors or ARNI, beta blockers, mineralocorticoid receptor "
-     "antagonists such as spironolactone, and SGLT2 inhibitors."),
+     "includes ACE inhibitors, ARBs, or ARNI, beta blockers, mineralocorticoid receptor "
+     "antagonists such as spironolactone, and SGLT2 inhibitors. An ARB may be used in "
+     "patients who cannot tolerate an ACE inhibitor."),
     ("Diuretics in heart failure",
      "Loop diuretics such as furosemide and torsemide are used to relieve congestion and "
      "reduce fluid overload symptoms such as leg edema and shortness of breath."),

@@ -1,15 +1,17 @@
 === 심혈관계 / 심부전 (Heart Failure) 6P 분석 결과 요약 ===
-생성 일시: 2026-09-18T11:43:28
+생성 일시: 2026-09-18T12:09:47
 
 Synthetic EMR 환자 수: 40
-수집 기사 수: 20
-추출 의료용어 수 (질환/증상/약물/검사/검사결과/치료): 54
-SNOMED 후보 매핑 수 (일반 키워드 포함 전체): 62
+실제 수집 기사 수: 20
+  - Offline_Fallback: 20
+추출 의료용어 수 (질환/증상/약물/검사/검사결과/치료): 61
+SNOMED candidate mapping 수 (일반 키워드 포함 전체): 69
   - Exact: 24
   - Partial: 6
-  - Unverified: 24
+  - Unverified: 31
   - No Match: 8
-Pilot 검증 대상 개수: 25
+Pilot 검증 대상 수: 25
+Pilot validation 상태: Manual validation pending
 Pilot terminology mapping accuracy: Manual validation pending
 
-※ SNOMED CT 매핑은 후보(candidate) 수준이며, 최종 확인은 사람이 담당합니다.
+※ SNOMED CT 매핑은 candidate mapping(후보 매핑) 수준이며, 최종 확인은 사람이 담당합니다.

@@ -35,14 +35,19 @@ from terminology import CLINICAL_CATEGORIES
 def build_summary(emr_df, articles_df, mapping_df, pilot_df, pilot_stats):
     clinical_mapping = mapping_df[mapping_df["source_type"].isin(CLINICAL_CATEGORIES)]
     status_counts = mapping_df["mapping_status"].value_counts()
+    source_counts = articles_df["source"].value_counts()
 
-    if pilot_stats["accuracy"] is None:
+    if pilot_stats["total_reviewed"] == 0:
+        validation_status = "Manual validation pending"
         accuracy_line = "Manual validation pending"
     else:
+        validation_status = (f"{pilot_stats['total_reviewed']}/{pilot_stats['total_pilot']} "
+                              f"건 채점 완료")
         accuracy_line = (f"{pilot_stats['accuracy']:.2f}% "
-                          f"(correct {pilot_stats['correct']} / reviewed "
-                          f"{pilot_stats['total_reviewed']} / pilot total "
-                          f"{pilot_stats['total_pilot']})")
+                          f"(correct {pilot_stats['correct']} / incorrect "
+                          f"{pilot_stats['incorrect']} / uncertain "
+                          f"{pilot_stats['uncertain']} / reviewed "
+                          f"{pilot_stats['total_reviewed']})")
 
     lines = [
         f"=== {config.SYSTEM_KO} / {config.DISEASE_KO} ({config.DISEASE_EN}) "
@@ -50,17 +55,23 @@ def build_summary(emr_df, articles_df, mapping_df, pilot_df, pilot_stats):
         f"생성 일시: {datetime.datetime.now().isoformat(timespec='seconds')}",
         "",
         f"Synthetic EMR 환자 수: {len(emr_df)}",
-        f"수집 기사 수: {len(articles_df)}",
+        f"실제 수집 기사 수: {len(articles_df)}",
+    ]
+    for source, count in source_counts.items():
+        lines.append(f"  - {source}: {count}")
+    lines += [
         f"추출 의료용어 수 (질환/증상/약물/검사/검사결과/치료): {len(clinical_mapping)}",
-        f"SNOMED 후보 매핑 수 (일반 키워드 포함 전체): {len(mapping_df)}",
+        f"SNOMED candidate mapping 수 (일반 키워드 포함 전체): {len(mapping_df)}",
         f"  - Exact: {int(status_counts.get('Exact', 0))}",
         f"  - Partial: {int(status_counts.get('Partial', 0))}",
         f"  - Unverified: {int(status_counts.get('Unverified', 0))}",
         f"  - No Match: {int(status_counts.get('No Match', 0))}",
-        f"Pilot 검증 대상 개수: {len(pilot_df)}",
+        f"Pilot 검증 대상 수: {len(pilot_df)}",
+        f"Pilot validation 상태: {validation_status}",
         f"Pilot terminology mapping accuracy: {accuracy_line}",
         "",
-        "※ SNOMED CT 매핑은 후보(candidate) 수준이며, 최종 확인은 사람이 담당합니다.",
+        "※ SNOMED CT 매핑은 candidate mapping(후보 매핑) 수준이며, "
+        "최종 확인은 사람이 담당합니다.",
     ]
     return "\n".join(lines)
 
