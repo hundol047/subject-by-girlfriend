@@ -15,6 +15,9 @@ SYNONYM_MAP
     연결해주는 보조 사전 (완전히 같은 문자열은 아니므로 Partial 매핑에 사용).
 """
 
+# mapping_status 와 무관하게, "실제 임상 개념" 카테고리 목록 (일반 상위 키워드는 제외).
+CLINICAL_CATEGORIES = ["disease", "symptom", "medication", "test", "test_result", "treatment"]
+
 CATEGORY_KEYWORDS = {
     "disease": [
         "heart failure",
@@ -42,6 +45,7 @@ CATEGORY_KEYWORDS = {
         "edema",
         "leg edema",
         "leg swelling",
+        "peripheral edema",
         "weight gain",
         "decreased appetite",
     ],
@@ -89,6 +93,7 @@ CATEGORY_KEYWORDS = {
     "treatment": [
         "ace inhibitor",
         "angiotensin receptor blocker",
+        "arb",
         "arni",
         "beta blocker",
         "beta-blocker",
@@ -170,6 +175,7 @@ SYNONYM_MAP = {
     "sob": "dyspnea",
     "leg edema": "edema",
     "leg swelling": "edema",
+    "peripheral edema": "edema",
     "swelling": "edema",
     "ecg": "electrocardiogram",
     "ekg": "electrocardiogram",

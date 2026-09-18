@@ -1,64 +1,63 @@
 ﻿term,emr_frequency,article_frequency,total_frequency,snomed_concept,snomed_concept_id,mapping_status
-meq/l,160,0,160,,UNVERIFIED,No Match
-ejection,124,10,134,,UNVERIFIED,No Match
 ejection fraction,124,10,134,Ejection fraction (observable entity),250908004,Exact
-fraction,124,10,134,,UNVERIFIED,No Match
-heart,80,28,108,,UNVERIFIED,No Match
 heart failure,80,23,103,Heart failure (disorder),84114007,Exact
-failure,80,23,103,,UNVERIFIED,No Match
 bnp,80,2,82,,UNVERIFIED,Unverified
 sodium,80,2,82,,UNVERIFIED,Unverified
 creatinine,80,1,81,,UNVERIFIED,Unverified
 potassium,80,1,81,,UNVERIFIED,Unverified
-pg/ml,80,0,80,,UNVERIFIED,No Match
-mg/dl,80,0,80,,UNVERIFIED,No Match
+discomfort,50,0,50,,UNVERIFIED,No Match
 chest discomfort,50,0,50,,UNVERIFIED,Unverified
 chest,50,0,50,,UNVERIFIED,No Match
-discomfort,50,0,50,,UNVERIFIED,No Match
-symptoms,40,5,45,,UNVERIFIED,No Match
 fatigue,42,1,43,Fatigue (finding),84229001,Exact
+disease,38,4,42,,UNVERIFIED,No Match
+allergy,40,0,40,,UNVERIFIED,No Match
+past,40,0,40,,UNVERIFIED,No Match
+leg,38,2,40,,UNVERIFIED,No Match
+lab,40,0,40,,UNVERIFIED,No Match
 dyspnea,36,3,39,Dyspnea (finding),267036007,Exact
 digoxin,32,1,33,Digoxin (substance),387106007,Exact
-hypertension,28,1,29,Hypertension (disorder),38341003,Exact
+weight,28,2,30,,UNVERIFIED,No Match
 weight gain,28,1,29,,UNVERIFIED,Unverified
-orthopnea,26,2,28,Orthopnea (finding),86290005,Exact
+hypertension,28,1,29,Hypertension (disorder),38341003,Exact
 losartan,28,0,28,,UNVERIFIED,Unverified
-atrial fibrillation,24,3,27,Atrial fibrillation (disorder),49436004,Exact
+orthopnea,26,2,28,Orthopnea (finding),86290005,Exact
 diabetes mellitus,26,1,27,Diabetes mellitus (disorder),73211009,Exact
+atrial fibrillation,24,3,27,Atrial fibrillation (disorder),49436004,Exact
+sacubitril/valsartan,26,0,26,,UNVERIFIED,Unverified
 sacubitril,26,0,26,,UNVERIFIED,Unverified
 valsartan,26,0,26,,UNVERIFIED,Unverified
-sacubitril/valsartan,26,0,26,,UNVERIFIED,Unverified
+edema,22,3,25,Edema (finding),267038008,Exact
 myocardial infarction,24,1,25,Myocardial infarction (disorder),22298006,Exact
 heart failure with preserved ejection fraction,24,1,25,Heart failure (disorder),84114007,Partial
-edema,22,3,25,Edema (finding),267038008,Exact
-heart failure with reduced ejection fraction,20,4,24,Heart failure (disorder),84114007,Partial
-leg edema,22,2,24,Edema (finding),267038008,Partial
-palpitations,24,0,24,Palpitations (finding),80313002,Exact
 decreased appetite,24,0,24,,UNVERIFIED,Unverified
+palpitations,24,0,24,Palpitations (finding),80313002,Exact
+leg edema,22,2,24,Edema (finding),267038008,Partial
+heart failure with reduced ejection fraction,20,4,24,Heart failure (disorder),84114007,Partial
 torsemide,22,1,23,,UNVERIFIED,Unverified
-coronary artery disease,20,2,22,Coronary arteriosclerosis (disorder),53741008,Exact
 cough,22,0,22,Cough (finding),49727002,Exact
+coronary artery disease,20,2,22,Coronary arteriosclerosis (disorder),53741008,Exact
+paroxysmal nocturnal dyspnea,20,1,21,,UNVERIFIED,Unverified
 metoprolol,20,1,21,Metoprolol (substance),373492002,Exact
 spironolactone,20,1,21,Spironolactone (substance),387078006,Exact
-paroxysmal nocturnal dyspnea,20,1,21,,UNVERIFIED,Unverified
 carvedilol,20,1,21,Carvedilol (substance),386836001,Exact
 lisinopril,20,0,20,Lisinopril (substance),386872008,Exact
-bisoprolol,18,1,19,,UNVERIFIED,Unverified
-empagliflozin,18,1,19,,UNVERIFIED,Unverified
 chronic kidney disease,18,1,19,Chronic kidney disease (disorder),709044004,Exact
+empagliflozin,18,1,19,,UNVERIFIED,Unverified
+bisoprolol,18,1,19,,UNVERIFIED,Unverified
 leg swelling,16,0,16,Edema (finding),267038008,Partial
 furosemide,14,1,15,Furosemide (substance),387475002,Exact
 congestive heart failure,14,0,14,Congestive heart failure (disorder),42343007,Exact
 enalapril,12,0,12,,UNVERIFIED,Unverified
 shortness of breath,10,1,11,Dyspnea (finding),267036007,Partial
+nt-probnp,0,2,2,,UNVERIFIED,Unverified
 chest x-ray,0,2,2,Plain chest X-ray (procedure),399208008,Exact
 echocardiography,0,2,2,Echocardiography (procedure),40701008,Exact
-nt-probnp,0,2,2,,UNVERIFIED,Unverified
-arni,0,1,1,,UNVERIFIED,Unverified
-cardiac rehabilitation,0,1,1,,UNVERIFIED,Unverified
-cardiac resynchronization therapy,0,1,1,,UNVERIFIED,Unverified
+peripheral edema,0,1,1,Edema (finding),267038008,Partial
 sodium restriction,0,1,1,,UNVERIFIED,Unverified
-fluid restriction,0,1,1,,UNVERIFIED,Unverified
-dapagliflozin,0,1,1,,UNVERIFIED,Unverified
-implantable cardioverter defibrillator,0,1,1,,UNVERIFIED,Unverified
 electrocardiogram,0,1,1,Electrocardiographic procedure (procedure),29303009,Exact
+dapagliflozin,0,1,1,,UNVERIFIED,Unverified
+fluid restriction,0,1,1,,UNVERIFIED,Unverified
+cardiac rehabilitation,0,1,1,,UNVERIFIED,Unverified
+implantable cardioverter defibrillator,0,1,1,,UNVERIFIED,Unverified
+arni,0,1,1,,UNVERIFIED,Unverified
+cardiac resynchronization therapy,0,1,1,,UNVERIFIED,Unverified

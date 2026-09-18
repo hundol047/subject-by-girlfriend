@@ -26,6 +26,32 @@ STOPWORDS = {
     "him", "them", "us", "his", "one", "two", "three", "into",
 }
 
+# 키워드 빈도/TF-IDF 결과에서 제외할 "의미 없는 일반 단어" (질환명을 구성하는 단독
+# 조각이나 서술용 상투어). "heart failure", "ejection fraction" 같은 복합 의료
+# 용어 자체는 extract_medical_terms() 에서 별도로(구문 단위) 집계되므로 영향이 없다.
+NOISE_WORDS = {
+    "heart", "failure", "symptom", "symptoms", "patient", "patients", "presenting",
+    "currently", "diagnosed", "medical", "history", "result", "results", "following",
+    "include", "includes", "included", "associated", "note", "notes", "also", "using",
+    "used", "well", "typically", "common", "commonly", "may", "often", "showing", "shows",
+    "show", "ejection", "fraction", "level", "levels", "due", "present", "presents",
+    "related", "based", "study", "studies", "review", "reviews", "article", "articles",
+    "information", "data", "clinical", "adults", "population", "research", "known",
+}
+
+# 검사 단위처럼 그 자체로는 의미가 없는 토큰
+UNIT_WORDS = {"mg", "ml", "mcg", "kg", "cm", "dl", "meq", "bpm", "mmhg", "ng"}
+_UNIT_PATTERN = re.compile(r"^[a-z]{1,4}/[a-z0-9]{1,4}$")  # meq/l, mg/dl, pg/ml, ml/min 등
+_NUMERIC_PATTERN = re.compile(r"^[\d.%\-]+$")  # 순수 숫자/퍼센트 토큰
+
+
+def _is_noise_token(tok):
+    if tok in NOISE_WORDS or tok in UNIT_WORDS:
+        return True
+    if _UNIT_PATTERN.match(tok) or _NUMERIC_PATTERN.match(tok):
+        return True
+    return False
+
 
 def clean_text(text):
     """공백/특수문자 정리. 의료 수치·단위(%,/,-,.)는 보존한다."""
@@ -60,6 +86,8 @@ def tokenize(text):
         if tok in STOPWORDS:
             continue
         if len(tok) < 3 and not any(ch.isdigit() for ch in tok):
+            continue
+        if _is_noise_token(tok):
             continue
         result.append(tok)
     return result

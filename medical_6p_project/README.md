@@ -58,6 +58,7 @@ medical_6p_project/
     keyword_frequency.csv          # EMR/기사 Top20 키워드 + 공통/전용 + TF-IDF
     integrated_mapping.csv          # 용어별 EMR/기사 빈도 + SNOMED 매핑 통합
     pilot_validation.csv             # Pilot 검증용 표본 (사람이 채점)
+    summary.txt                       # 발표용 결과 요약 (자동 생성)
     *.png                              # 키워드/매핑 상태 시각화
   config.py                           # 질환/계통 등 설정값 (여기만 바꾸면 됨)
   main.py                              # 전체 파이프라인 실행 진입점
@@ -85,23 +86,32 @@ medical_6p_project/
    질환/증상/약물/검사/검사결과/치료 6개 카테고리 사전으로 후보 의료 용어를
    추출합니다.
 4. **SNOMED CT 후보 매핑** (`snomed_mapper.py`): 추출된 용어를 소규모 SNOMED
-   참조표(`terminology.py`)와 대조합니다. **실제로 검증되지 않은 concept id는
-   절대 새로 만들지 않고 `UNVERIFIED`로 남깁니다.**
+   참조표(`terminology.py`)와 대조합니다. 이 자동 매핑은 어디까지나
+   **candidate mapping(후보 매핑)** 수준이며, concept id를 추측하거나 임의로
+   만들지 않습니다. **실제로 공개적으로 검증되지 않은 concept id는 항상
+   `UNVERIFIED`로 남기고, 최종 확인은 사람(Pilot 검증)이 담당합니다.**
    - `Exact`: 표준 표기와 완전히 동일
    - `Partial`: 동의어/유사 문자열로 연결된 후보
    - `Unverified`: 의료 용어 사전에는 있지만 참조표에 없음
    - `No Match`: 의료 용어로도 인식되지 않음 (일반 상위 키워드 등)
 5. **EMR + 기사 통합** (`snomed_mapper.py`): 용어별 EMR/기사 빈도와 SNOMED
    매핑 결과를 합쳐 `integrated_mapping.csv`를 만듭니다.
-6. **Pilot 검증** (`validate_mapping.py`): 빈도 상위 + 일부 무작위 용어를 합쳐
-   25개 표본을 뽑아 `pilot_validation.csv`(빈 `human_judgment` 열 포함)를
-   생성합니다. 사람이 각 행에 `Correct`/`Incorrect`/`Uncertain`을 입력한 뒤
-   `python -c "..."` 또는 스크립트로 `compute_pilot_accuracy()`를 다시
-   실행하면 **Pilot terminology mapping accuracy**
-   (= Correct 개수 / 전체 검증 대상 수 × 100)를 계산합니다.
+6. **Pilot 검증** (`validate_mapping.py`): **일반 단어가 아닌 실제 임상 개념
+   (질환/증상/약물/검사/검사결과/치료)만** 대상으로, 빈도 상위 절반 + 무작위
+   절반을 합쳐 20~25개 표본을 뽑아 `pilot_validation.csv`를 생성합니다.
+   컬럼은 `original_term, normalized_term, snomed_concept, snomed_concept_id,
+   mapping_status, human_judgment, review_note`이며 `human_judgment`,
+   `review_note`는 비워둡니다. 사람이 각 행의 `human_judgment`에
+   `Correct`/`Incorrect`/`Uncertain`을 입력한 뒤 `pilot_validation_stats()`를
+   다시 실행하면 `total_reviewed`, `correct`, `incorrect`, `uncertain`과 함께
+   **Pilot terminology mapping accuracy** (= correct / total_reviewed × 100)를
+   계산합니다. 아무도 채점하지 않았으면 정확도를 임의로 계산하지 않고
+   `Manual validation pending`을 출력합니다.
    ※ 이는 "의료 AI 정확도"가 아니라 사람이 표본을 검토한 결과입니다.
-7. **시각화** (`visualize.py`): EMR/기사 키워드 Top15, EMR-기사 공통 키워드
-   비교, SNOMED 매핑 상태 분포를 PNG로 저장합니다.
+7. **시각화 + 요약** (`visualize.py`, `main.py`): EMR/기사 키워드 Top15,
+   EMR-기사 공통 키워드 비교, SNOMED 매핑 상태 분포를 PNG로 저장하고,
+   환자 수/기사 수/추출 용어 수/매핑 상태 분포/Pilot 결과를 모아
+   `results/summary.txt`에 발표용 요약으로 저장합니다.
 
 ## 6. 결과 파일 설명
 
@@ -112,7 +122,8 @@ medical_6p_project/
 | `data/snomed_mapping.csv` | 용어별 SNOMED CT 후보 매핑 (original_term, normalized_term, english_term, snomed_concept, snomed_concept_id, source_type, mapping_status) |
 | `results/keyword_frequency.csv` | EMR/기사 키워드 빈도, 공통/전용 구분, TF-IDF 점수 |
 | `results/integrated_mapping.csv` | 용어별 EMR/기사/전체 빈도 + SNOMED 매핑 결과 |
-| `results/pilot_validation.csv` | Pilot 검증 표본 (사람이 human_judgment 열을 채움) |
+| `results/pilot_validation.csv` | Pilot 검증 표본 (original_term, normalized_term, snomed_concept, snomed_concept_id, mapping_status, human_judgment, review_note). 실제 임상 개념만 포함하며 human_judgment는 사람이 채움 |
+| `results/summary.txt` | 발표용 결과 요약 (환자 수, 기사 수, 추출 용어 수, 매핑 상태 분포, Pilot 결과) |
 | `results/*.png` | 키워드 Top15, 공통 키워드, SNOMED 매핑 상태 분포 그래프 |
 
 ## 7. 질환/계통 변경 방법
@@ -137,9 +148,11 @@ medical_6p_project/
   (`data/articles.csv`의 `source` 열이 `Offline_Fallback`이면 실시간 수집이
   아니라 대체 텍스트임을 뜻합니다.) 인터넷이 연결된 일반 PC에서 실행하면
   실제 공개 문서가 수집됩니다.
+- **자동 SNOMED 매핑은 candidate mapping(후보 매핑)일 뿐입니다.** 사람이
+  Pilot 검증으로 확인하기 전까지는 최종 정답으로 취급하지 않습니다.
 - **Pilot 검증은 사람이 직접 채점해야 의미가 있습니다.** `human_judgment`
-  열을 비워둔 채로는 정확도가 계산되지 않으며("대기 중"으로 표시), 임의로
-  자동 채점하지 않습니다.
+  열을 비워둔 채로는 정확도가 계산되지 않으며(`Manual validation pending`으로
+  표시), 임의로 자동 채점하지 않습니다.
 - 데이터 규모(환자 40명, 기사 20여 건)가 작아 통계적으로 일반화할 수 있는
   결과가 아니라, 파이프라인 자체를 보여주기 위한 교육용 예시입니다.
 
@@ -147,9 +160,9 @@ medical_6p_project/
 
 | 항목 | 내용 |
 |---|---|
-| **Placement** | 심혈관계 (Cardiovascular system) |
-| **Problem** | 심부전 환자의 임상 기록과 공개 임상 문헌 사이에서 사용되는 의료 용어를 비교하고, 표준 용어체계(SNOMED CT)로 연결하는 문제 |
-| **Project** | 가상 EMR 생성 + 공개 임상 기사 수집/분석 + SNOMED CT 후보 매핑 파이프라인 |
-| **Place** | Synthetic EMR(가상 환자 40명) + 공개 임상 기사/문서(Wikipedia, PubMed, MedlinePlus 등) |
-| **Pilot** | 상위/무작위 용어 25개를 뽑아 사람이 Correct/Incorrect/Uncertain으로 직접 검증 |
-| **Performance** | EMR·기사 키워드 빈도/TF-IDF 분석, SNOMED 후보 매핑률(상태별 분포), Pilot terminology mapping accuracy |
+| **Placement** | 심혈관계 |
+| **Problem** | 심부전 환자의 주요 임상정보가 EMR과 공개 임상정보에서 어떻게 표현되는지 분석하고 의료용어 표준화 가능성을 확인 |
+| **Project** | Synthetic EMR + 공개 임상기사 + 텍스트 마이닝 + SNOMED CT 후보 매핑 |
+| **Place** | 가상 EMR 및 공개 의료정보 |
+| **Pilot** | 주요 의료용어 20~25개를 사람이 직접 검증 |
+| **Performance** | 키워드 빈도, EMR/기사 공통 개념, SNOMED 매핑 상태, Pilot terminology mapping accuracy |

@@ -1,64 +1,63 @@
 ﻿original_term,normalized_term,english_term,snomed_concept,snomed_concept_id,source_type,mapping_status
-empagliflozin,empagliflozin,empagliflozin,,UNVERIFIED,medication,Unverified
-chest x-ray,chest x-ray,chest x-ray,Plain chest X-ray (procedure),399208008,test,Exact
-sacubitril/valsartan,sacubitril/valsartan,sacubitril/valsartan,,UNVERIFIED,medication,Unverified
-sodium restriction,sodium restriction,sodium restriction,,UNVERIFIED,treatment,Unverified
-paroxysmal nocturnal dyspnea,paroxysmal nocturnal dyspnea,paroxysmal nocturnal dyspnea,,UNVERIFIED,symptom,Unverified
-fluid restriction,fluid restriction,fluid restriction,,UNVERIFIED,treatment,Unverified
-carvedilol,carvedilol,carvedilol,Carvedilol (substance),386836001,medication,Exact
-leg swelling,leg swelling,leg swelling,Edema (finding),267038008,symptom,Partial
-hypertension,hypertension,hypertension,Hypertension (disorder),38341003,disease,Exact
-orthopnea,orthopnea,orthopnea,Orthopnea (finding),86290005,symptom,Exact
-valsartan,valsartan,valsartan,,UNVERIFIED,medication,Unverified
-chest discomfort,chest discomfort,chest discomfort,,UNVERIFIED,symptom,Unverified
-enalapril,enalapril,enalapril,,UNVERIFIED,medication,Unverified
-losartan,losartan,losartan,,UNVERIFIED,medication,Unverified
-torsemide,torsemide,torsemide,,UNVERIFIED,medication,Unverified
-weight gain,weight gain,weight gain,,UNVERIFIED,symptom,Unverified
-atrial fibrillation,atrial fibrillation,atrial fibrillation,Atrial fibrillation (disorder),49436004,disease,Exact
-heart failure,heart failure,heart failure,Heart failure (disorder),84114007,disease,Exact
-cardiac resynchronization therapy,cardiac resynchronization therapy,cardiac resynchronization therapy,,UNVERIFIED,treatment,Unverified
-myocardial infarction,myocardial infarction,myocardial infarction,Myocardial infarction (disorder),22298006,disease,Exact
-bisoprolol,bisoprolol,bisoprolol,,UNVERIFIED,medication,Unverified
-ejection fraction,ejection fraction,ejection fraction,Ejection fraction (observable entity),250908004,test_result,Exact
-cardiac rehabilitation,cardiac rehabilitation,cardiac rehabilitation,,UNVERIFIED,treatment,Unverified
-arni,arni,arni,,UNVERIFIED,treatment,Unverified
-creatinine,creatinine,creatinine,,UNVERIFIED,test_result,Unverified
-heart failure with preserved ejection fraction,heart failure with preserved ejection fraction,heart failure with preserved ejection fraction,Heart failure (disorder),84114007,disease,Partial
-potassium,potassium,potassium,,UNVERIFIED,test_result,Unverified
-fatigue,fatigue,fatigue,Fatigue (finding),84229001,symptom,Exact
-coronary artery disease,coronary artery disease,coronary artery disease,Coronary arteriosclerosis (disorder),53741008,disease,Exact
-decreased appetite,decreased appetite,decreased appetite,,UNVERIFIED,symptom,Unverified
-sodium,sodium,sodium,,UNVERIFIED,test_result,Unverified
-nt-probnp,nt-probnp,nt-probnp,,UNVERIFIED,test_result,Unverified
-diabetes mellitus,diabetes mellitus,diabetes mellitus,Diabetes mellitus (disorder),73211009,disease,Exact
-metoprolol,metoprolol,metoprolol,Metoprolol (substance),373492002,medication,Exact
-congestive heart failure,congestive heart failure,congestive heart failure,Congestive heart failure (disorder),42343007,disease,Exact
-dyspnea,dyspnea,dyspnea,Dyspnea (finding),267036007,symptom,Exact
-lisinopril,lisinopril,lisinopril,Lisinopril (substance),386872008,medication,Exact
-palpitations,palpitations,palpitations,Palpitations (finding),80313002,symptom,Exact
-spironolactone,spironolactone,spironolactone,Spironolactone (substance),387078006,medication,Exact
 implantable cardioverter defibrillator,implantable cardioverter defibrillator,implantable cardioverter defibrillator,,UNVERIFIED,treatment,Unverified
-edema,edema,edema,Edema (finding),267038008,symptom,Exact
-echocardiography,echocardiography,echocardiography,Echocardiography (procedure),40701008,test,Exact
-dapagliflozin,dapagliflozin,dapagliflozin,,UNVERIFIED,medication,Unverified
-heart failure with reduced ejection fraction,heart failure with reduced ejection fraction,heart failure with reduced ejection fraction,Heart failure (disorder),84114007,disease,Partial
-bnp,bnp,bnp,,UNVERIFIED,test_result,Unverified
-shortness of breath,shortness of breath,shortness of breath,Dyspnea (finding),267036007,symptom,Partial
 digoxin,digoxin,digoxin,Digoxin (substance),387106007,medication,Exact
-cough,cough,cough,Cough (finding),49727002,symptom,Exact
-furosemide,furosemide,furosemide,Furosemide (substance),387475002,medication,Exact
-leg edema,leg edema,leg edema,Edema (finding),267038008,symptom,Partial
-electrocardiogram,electrocardiogram,electrocardiogram,Electrocardiographic procedure (procedure),29303009,test,Exact
+enalapril,enalapril,enalapril,,UNVERIFIED,medication,Unverified
+lisinopril,lisinopril,lisinopril,Lisinopril (substance),386872008,medication,Exact
+cardiac rehabilitation,cardiac rehabilitation,cardiac rehabilitation,,UNVERIFIED,treatment,Unverified
+palpitations,palpitations,palpitations,Palpitations (finding),80313002,symptom,Exact
+dyspnea,dyspnea,dyspnea,Dyspnea (finding),267036007,symptom,Exact
 sacubitril,sacubitril,sacubitril,,UNVERIFIED,medication,Unverified
+spironolactone,spironolactone,spironolactone,Spironolactone (substance),387078006,medication,Exact
+nt-probnp,nt-probnp,nt-probnp,,UNVERIFIED,test_result,Unverified
+atrial fibrillation,atrial fibrillation,atrial fibrillation,Atrial fibrillation (disorder),49436004,disease,Exact
+peripheral edema,peripheral edema,peripheral edema,Edema (finding),267038008,symptom,Partial
+fluid restriction,fluid restriction,fluid restriction,,UNVERIFIED,treatment,Unverified
+coronary artery disease,coronary artery disease,coronary artery disease,Coronary arteriosclerosis (disorder),53741008,disease,Exact
+echocardiography,echocardiography,echocardiography,Echocardiography (procedure),40701008,test,Exact
+electrocardiogram,electrocardiogram,electrocardiogram,Electrocardiographic procedure (procedure),29303009,test,Exact
+dapagliflozin,dapagliflozin,dapagliflozin,,UNVERIFIED,medication,Unverified
+leg edema,leg edema,leg edema,Edema (finding),267038008,symptom,Partial
+potassium,potassium,potassium,,UNVERIFIED,test_result,Unverified
+torsemide,torsemide,torsemide,,UNVERIFIED,medication,Unverified
+shortness of breath,shortness of breath,shortness of breath,Dyspnea (finding),267036007,symptom,Partial
+sacubitril/valsartan,sacubitril/valsartan,sacubitril/valsartan,,UNVERIFIED,medication,Unverified
+heart failure with preserved ejection fraction,heart failure with preserved ejection fraction,heart failure with preserved ejection fraction,Heart failure (disorder),84114007,disease,Partial
+losartan,losartan,losartan,,UNVERIFIED,medication,Unverified
+sodium restriction,sodium restriction,sodium restriction,,UNVERIFIED,treatment,Unverified
+decreased appetite,decreased appetite,decreased appetite,,UNVERIFIED,symptom,Unverified
+furosemide,furosemide,furosemide,Furosemide (substance),387475002,medication,Exact
+valsartan,valsartan,valsartan,,UNVERIFIED,medication,Unverified
+heart failure with reduced ejection fraction,heart failure with reduced ejection fraction,heart failure with reduced ejection fraction,Heart failure (disorder),84114007,disease,Partial
+heart failure,heart failure,heart failure,Heart failure (disorder),84114007,disease,Exact
+bisoprolol,bisoprolol,bisoprolol,,UNVERIFIED,medication,Unverified
+diabetes mellitus,diabetes mellitus,diabetes mellitus,Diabetes mellitus (disorder),73211009,disease,Exact
+ejection fraction,ejection fraction,ejection fraction,Ejection fraction (observable entity),250908004,test_result,Exact
+cough,cough,cough,Cough (finding),49727002,symptom,Exact
+carvedilol,carvedilol,carvedilol,Carvedilol (substance),386836001,medication,Exact
+weight gain,weight gain,weight gain,,UNVERIFIED,symptom,Unverified
+paroxysmal nocturnal dyspnea,paroxysmal nocturnal dyspnea,paroxysmal nocturnal dyspnea,,UNVERIFIED,symptom,Unverified
+edema,edema,edema,Edema (finding),267038008,symptom,Exact
+bnp,bnp,bnp,,UNVERIFIED,test_result,Unverified
+metoprolol,metoprolol,metoprolol,Metoprolol (substance),373492002,medication,Exact
 chronic kidney disease,chronic kidney disease,chronic kidney disease,Chronic kidney disease (disorder),709044004,disease,Exact
-meq/l,meq/l,meq/l,,UNVERIFIED,general_keyword,No Match
-ejection,ejection,ejection,,UNVERIFIED,general_keyword,No Match
-fraction,fraction,fraction,,UNVERIFIED,general_keyword,No Match
-heart,heart,heart,,UNVERIFIED,general_keyword,No Match
-failure,failure,failure,,UNVERIFIED,general_keyword,No Match
-mg/dl,mg/dl,mg/dl,,UNVERIFIED,general_keyword,No Match
-pg/ml,pg/ml,pg/ml,,UNVERIFIED,general_keyword,No Match
+creatinine,creatinine,creatinine,,UNVERIFIED,test_result,Unverified
+chest discomfort,chest discomfort,chest discomfort,,UNVERIFIED,symptom,Unverified
+empagliflozin,empagliflozin,empagliflozin,,UNVERIFIED,medication,Unverified
+congestive heart failure,congestive heart failure,congestive heart failure,Congestive heart failure (disorder),42343007,disease,Exact
+fatigue,fatigue,fatigue,Fatigue (finding),84229001,symptom,Exact
+cardiac resynchronization therapy,cardiac resynchronization therapy,cardiac resynchronization therapy,,UNVERIFIED,treatment,Unverified
+leg swelling,leg swelling,leg swelling,Edema (finding),267038008,symptom,Partial
+chest x-ray,chest x-ray,chest x-ray,Plain chest X-ray (procedure),399208008,test,Exact
+hypertension,hypertension,hypertension,Hypertension (disorder),38341003,disease,Exact
+myocardial infarction,myocardial infarction,myocardial infarction,Myocardial infarction (disorder),22298006,disease,Exact
+arni,arni,arni,,UNVERIFIED,treatment,Unverified
+orthopnea,orthopnea,orthopnea,Orthopnea (finding),86290005,symptom,Exact
+sodium,sodium,sodium,,UNVERIFIED,test_result,Unverified
 chest,chest,chest,,UNVERIFIED,general_keyword,No Match
 discomfort,discomfort,discomfort,,UNVERIFIED,general_keyword,No Match
-symptoms,symptoms,symptoms,,UNVERIFIED,general_keyword,No Match
+allergy,allergy,allergy,,UNVERIFIED,general_keyword,No Match
+lab,lab,lab,,UNVERIFIED,general_keyword,No Match
+past,past,past,,UNVERIFIED,general_keyword,No Match
+disease,disease,disease,,UNVERIFIED,general_keyword,No Match
+leg,leg,leg,,UNVERIFIED,general_keyword,No Match
+weight,weight,weight,,UNVERIFIED,general_keyword,No Match
